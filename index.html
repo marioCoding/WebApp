@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +13,27 @@
     </header>
     <main>
         <article class="form-article">
-          <h2>Using Disney Characters API</h2>
-          <p>Enter a Disney character's name to find some trivia: </p>
+          <h2>Using Disney API</h2>
           <form>
-            <label for="name">Character's name: </label>
+            <p class="directions">Enter a Disney character's name to discover some trivia: </p>
+            <label for="name" class="charName">Character's name: </label>
             <input type="text" name="name" id="disneyName" required>
-            <input type="submit" value="Go" class="btn1"> 
+            <button class="btn1">Go</button>
           </form>
         </article>
         <article class="api-return-article">
-          <div id="container">test</div>
+          <div id="container" class="container1">
+            <h3>Name: </h3>
+          </div>
+          <div id="container" class="container2">
+            <h3>Films: </h3>
+          </div>
+          <div id="container" class="container3">
+            <h3>Short films: </h3>
+          </div>
+          <div id="container" class="container4">
+            <h3>Park Attractions: </h3>
+          </div>
         </article>
     </main>
 

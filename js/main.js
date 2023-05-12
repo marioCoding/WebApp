@@ -1,8 +1,14 @@
+// Define global variables
+const article1 = document.querySelector(".form-article");
+const container1 = document.querySelector(".container1");
+const container2 = document.querySelector(".container2");
+const container3 = document.querySelector(".container3");
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.querySelector(".btn1");
   btn.addEventListener("click", init);
 });
-
 
 async function init() {
   // grab input from form
@@ -22,11 +28,9 @@ async function init() {
       
       // make reference to the html container where the info
       // will be displayed
-      const container = document.querySelector("#container")
-      container.innerHTML = " ";
-      container.appendChild(nameElement);
+      container1.innerHTML = " ";
+      container1.appendChild(nameElement);
   } catch {
       err => console.error("error", err.message);
   }
-
 }
