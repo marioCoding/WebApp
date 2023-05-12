@@ -12,8 +12,18 @@
         <h1>Disney Characters</h1>
     </header>
     <main>
-        <h2>Using Disney Characters API</h2>
-        <div id="container"></div>
+        <article class="form-article">
+          <h2>Using Disney Characters API</h2>
+          <p>Enter a Disney character's name to find some trivia: </p>
+          <form>
+            <label for="name">Character's name: </label>
+            <input type="text" name="name" id="disneyName" required>
+            <input type="submit" value="Go" class="btn1"> 
+          </form>
+        </article>
+        <article class="api-return-article">
+          <div id="container">test</div>
+        </article>
     </main>
 
     <script src="./js/main.js" defer></script>
