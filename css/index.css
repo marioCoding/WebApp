@@ -19,6 +19,10 @@ header {
 h1 {
   font-family: 'New Walt Disney Font', sans-serif;
   font-size: 230%;
+  color: #fff;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 3s linear infinite;
 }
 
 /* Form article */
@@ -46,6 +50,9 @@ h3 {
 }
 input {
   margin: 5%;
+}
+button {
+  padding: 3% 30%;
 }
 
 /* API return article */
@@ -110,5 +117,16 @@ input {
   form {
     font-size: 220%;
     height: 10%;
+  }
+}
+
+/* animations */
+
+@keyframes shine {
+  from { 
+    -webkit-mask-position: 150%; 
+  }
+  to { 
+    -webkit-mask-position: -50%; 
   }
 }
