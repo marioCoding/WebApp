@@ -20,29 +20,32 @@ async function init() {
   let response = await fetch(url);
   let character = await response.json();
   try {
-      // grab textContent from the API
+      // grab data from the API
       const nameElement = document.createElement("p");
       // access the name using character.DATA.name
       // data is important here because it takes me through the data object
       // and into the "name" object property
-      nameElement.textContent = `${await character.data[0].name}`;
+      nameElement.textContent = `${await data[0].name}`;
       const filmElement = document.createElement("p");
-      filmElement.textContent = `${await character.data[0].films}`;
+      filmElement.textContent = `${await character.data[1].films}`;
       const shortFilmElement = document.createElement("p");
-      shortFilmElement.textContent = `${await character.data[0].shortFilms}`;
+      shortFilmElement.textContent = `${await character.data[1].shortFilms}`;
       const parkElement = document.createElement("p");
-      parkElement.textContent = `${await character.data[0].parkAttractions}`;
+      parkElement.textContent = `${await character.data[1].parkAttractions}`;
       
       // make reference to the html container where the info
       // will be displayed
       container1.innerHTML = " ";
-      let name = container1.appendChild(nameElement);
+      container1.appendChild(nameElement);
       container2.innerHTML = " ";
-      let film = container2.appendChild(filmElement);
+      container2.appendChild(filmElement);
       container3.innerHTML = " ";
-      let shortFilms = container3.appendChild(shortFilmElement);
+      container3.appendChild(shortFilmElement);
       container4.innerHTML = " ";
-      let parkAttractions = container4.appendChild(parkElement);
+      container4.appendChild(parkElement);
+
+      // create an object that will return the appended children
+    
   } catch {
       err => console.error("error", err.message);
   }

@@ -116,7 +116,7 @@ button {
   flex-direction: column;
   background-color: beige;
   width: 60vw;
-  margin: auto;
+  margin: 0 auto 15% auto;
   padding: 10%;
   border: 2px solid #000;
 }
@@ -129,6 +129,34 @@ footer {
   height: 10vh;
   width: 100vw;
   background-color:#759eb8;
+  position: relative;
+}
+
+@media (min-width: 500px) {
+  /* header */
+  h1 {
+    font-size: 400%;
+  }
+  header {
+    height: 13vh;
+  }
+  /* Article 1 */
+  h2 {
+    font-size: 250%;
+  }
+  form {
+    font-size: 220%;
+    height: 10%;
+  }
+  input {
+    height: 3vh;
+    width: 30vw;
+    font-size: 90%;
+  }
+  /* footer */
+  footer {
+    position: relative;
+  }
 }
 
 @media (min-width: 720px) {
@@ -146,6 +174,10 @@ footer {
   form {
     font-size: 220%;
     height: 10%;
+  }
+  /* footer */
+  footer {
+    position: relative;
   }
 }
 
