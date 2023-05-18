@@ -33,8 +33,9 @@ async function getData() {
         // Style container 1
           nameHeader.innerHTML = "Name: "
           nameHeader.style.fontSize = "200%";
+          nameHeader.style.margin = "5%";
           nameElement.style.fontSize = "150%";
-      console.log(nameElement);
+  
       
       // Container 2
       const filmHeader = document.createElement("h3");
@@ -49,6 +50,7 @@ async function getData() {
         // Style container 2
           filmHeader.innerHTML = "Films: ";
           filmHeader.style.fontSize = "200%";
+          filmHeader.style.margin = "5%";
           filmElement.style.fontSize = "150%";
           filmElement.style.fontStyle = "italic";
 
@@ -72,6 +74,7 @@ async function getData() {
           shortFilmElement.style.fontStyle = "italic";
           shortFilmHeader.innerHTML = "Short Films: ";
           shortFilmHeader.style.fontSize = "200%";
+          shortFilmHeader.style.margin = "5%";
 
       // Container 4
       const parkHeader = document.createElement("h3");
@@ -108,6 +111,7 @@ async function getData() {
           parkElement.style.fontStyle = "italic";
           parkHeader.innerHTML = "Park Attractions: ";
           parkHeader.style.fontSize = "200%";
+          parkHeader.style.margin = "5%";
           
       }
       
