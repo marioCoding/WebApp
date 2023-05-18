@@ -41,6 +41,7 @@ h1 {
   padding: 10%;
   border: 2px solid #000;
   z-index: 1500;
+  border-radius: 50px;
 }
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -176,6 +177,9 @@ footer {
     font-size: 220%;
     height: 10%;
   }
+  input {
+    height: 5vh;
+  }
   /* footer */
   footer {
     position: relative;
@@ -215,7 +219,7 @@ section{
       transform:scale(1.2);
   }
 }
-span{
+span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -335,5 +339,3 @@ span:nth-child(10){
 
 
 
-
-.map

@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function getData() {
+  
   // grab input from form
   const charName = document.getElementById("disneyName");
   let request = charName.value;
@@ -30,12 +31,12 @@ async function getData() {
         // and into the "name" object property
       let nameData = await character.data[1].name;
       nameElement.textContent = nameData;
-        // Style container 1
+        // Style container 3
           nameHeader.innerHTML = "Name: "
           nameHeader.style.fontSize = "200%";
           nameElement.style.fontSize = "150%";
       console.log(nameElement);
-      
+      /*
       // Container 2
       const filmHeader = document.createElement("h3");
       const filmElement = document.createElement("p");
@@ -52,30 +53,55 @@ async function getData() {
           filmElement.style.fontSize = "150%";
           filmElement.style.fontStyle = "italic";
 
+          */
       // Container 3 
+      
       const shortFilmHeader = document.createElement("h3");
       const shortFilmElement = document.createElement("p");
-      let shortFilmData = await character.data[0].shortFilms;
-      let shortFilmString = shortFilmData.join(" || ");
-      console.log(shortFilmData);
-      console.log(shortFilmElement);
-   
-      if (shortFilmData.length === 0)
-        shortFilmElement.textContent = `${nameData} has not appeared in any Disney short films.`;
-      else
-        shortFilmElement.textContent = shortFilmString;
- 
+      // The API stores data in 2 different array elements. 
+      // Check both elements for data:
+      let shortFilmCheck0 = await character.data[0].shortFilms;
+      let shortFilmCheck1 = await character.data[1].shortFilms;
+      console.log(`000 ${shortFilmCheck0}`);
+      console.log(`001 ${shortFilmCheck1}`);
+      let noShortFilm = `${nameElement} has not appeared in any Disney short films.`;
+      let shortFilmData;
+      let shortFilmString;
+      if (shortFilmCheck0.length > shortFilmCheck1.length) {
+          shortFilmData = shortFilmCheck0;
+      } else if (shortFilmCheck1.length > shortFilmCheck0.length) {
+          shortFilmData = shortFilmCheck1;
+      } else if (shortFilmCheck0.length === 0) {
+          shortFilmElement.textContent = noShortFilm;
+      } else if (shortFilmCheck1.length === 0) {
+          shortFilmElement.textContent = noShortFilm;
+      }
+      
+      if (shortFilmData.length === 0) {
+          shortFilmString = noShortFilm;
+      } else {
+          shortFilmString = shortFilmData.join(" | ")
+      
+          console.log(`000 ${shortFilmCheck0}`);
+          console.log(`001 ${shortFilmCheck1}`);
+          console.log(`Data ${shortFilmData}`);
+          console.log(`String ${shortFilmString}`);
+  
        
         // Style container 3
           shortFilmElement.textContent = shortFilmString;
           shortFilmElement.style.fontSize = "150%";
           shortFilmElement.style.fontStyle = "italic";
-          shortFilmHeader.innerHTML = "Short Films: ";
+          shortFilmHeader.innerHTML = "Park Attractions: ";
           shortFilmHeader.style.fontSize = "200%";
+          
+      }
 
       // Container 4
       const parkHeader = document.createElement("h3");
       const parkElement = document.createElement("p");
+      // The API stores data in 2 different array elements.
+      // Check both elements for data: 
       let parkAttractionsCheck0 = await character.data[0].parkAttractions;
       let parkAttractionsCheck1 = await character.data[1].parkAttractions;
       let noAttractions = `${nameElement} does not appear in any Disney attractions`;
@@ -94,7 +120,7 @@ async function getData() {
       if (parkAttractionsData.length === 0) {
           parkAttractionsString = noAttractions;
       } else {
-          parkAttractionsString = parkAttractionsData.join(" || ")
+          parkAttractionsString = parkAttractionsData.join(" | ")
       
           console.log(`000 ${parkAttractionsCheck0}`);
           console.log(`001 ${parkAttractionsCheck1}`);
@@ -116,15 +142,20 @@ async function getData() {
       container1.innerHTML = " ";
       container1.appendChild(nameHeader);
       container1.appendChild(nameElement);
+      /*
       container2.innerHTML = " ";
       container2.appendChild(filmHeader);
       container2.appendChild(filmElement);
+      */
       container3.innerHTML = " ";
       container3.appendChild(shortFilmHeader);
       container3.appendChild(shortFilmElement);
       container4.innerHTML = " ";
       container4.appendChild(parkHeader);
       container4.appendChild(parkElement);
+
+      // create an object that will return the appended children
+   
 
   } catch {
       err => console.error("error", err.message);
