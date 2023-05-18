@@ -7,7 +7,6 @@
 }
 body {
   background-color: #b3c5d7;
-  
 }
 /* header */
 header {
@@ -29,15 +28,21 @@ h1 {
 }
 
 /* Form article */
+.ears {
+  width: 80vw;
+  display: block;
+  margin: 5% auto -21% auto;
+}
 .form-article {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 150%;
   background-color: beige;
   width: 60vw;
-  margin: 10% auto;
+  margin: 10% auto 0 auto;
   padding: 10%;
   border: 2px solid #000;
   z-index: 1500;
@@ -70,6 +75,12 @@ button {
 }
 
 /* API return article */
+.ribbon {
+  width: 40vw;
+  display: block;
+  margin: 0 auto -25% auto;
+  z-index: 1400;
+}
 .container1 {
   position: relative;
   z-index: 1200;
@@ -79,7 +90,7 @@ button {
   flex-direction: column;
   background-color: beige;
   width: 60vw;
-  margin: auto;
+  margin: 5% auto 0 auto;
   padding: 10%;
   border: 2px solid #000;
 }
@@ -92,7 +103,7 @@ button {
   flex-direction: column;
   background-color: beige;
   width: 60vw;
-  margin: auto;
+  margin: 5% auto 0 auto;
   padding: 10%;
   border: 2px solid #000;
 }
@@ -105,7 +116,7 @@ button {
   flex-direction: column;
   background-color: beige;
   width: 60vw;
-  margin: auto;
+  margin: 5% auto 0 auto;
   padding: 10%;
   border: 2px solid #000;
 }
@@ -118,7 +129,7 @@ button {
   flex-direction: column;
   background-color: beige;
   width: 60vw;
-  margin: 0 auto 15% auto;
+  margin: 5% auto 5% auto;
   padding: 10%;
   border: 2px solid #000;
 }
@@ -132,9 +143,10 @@ footer {
   width: 100vw;
   background-color:#759eb8;
   position: relative;
+  margin-top: 15%;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   /* header */
   h1 {
     font-size: 400%;
@@ -143,17 +155,25 @@ footer {
     height: 13vh;
   }
   /* Article 1 */
+  .ears {
+    display: block;
+    margin: 5% auto -20% auto;
+  }
   h2 {
     font-size: 250%;
   }
   form {
-    font-size: 220%;
+    font-size: 170%;
     height: 10%;
   }
   input {
     height: 3vh;
     width: 30vw;
     font-size: 90%;
+  }
+  /* Section */
+  section {
+    overflow: hidden;
   }
   /* footer */
   footer {
@@ -170,6 +190,10 @@ footer {
     height: 13vh;
   }
   /* Article 1 */
+  .ears {
+    display: block;
+    margin: 5% auto -20% auto;
+  }
   h2 {
     font-size: 250%;
   }
@@ -179,6 +203,83 @@ footer {
   }
   input {
     height: 5vh;
+  }
+  /* Article 3 */
+  
+  /* section */
+  section {
+    overflow: hidden;
+  }
+  /* footer */
+  footer {
+    position: relative;
+  }
+}
+@media (min-width: 900px) {
+  /* header */
+  h1 {
+    font-size: 400%;
+  }
+  header {
+    height: 13vh;
+  }
+  /* Article 1 */
+  .ears {
+    display: block;
+    margin: 5% auto -18% auto;
+  }
+  h2 {
+    font-size: 250%;
+  }
+  form {
+    font-size: 220%;
+    height: 10%;
+  }
+  input {
+    height: 5vh;
+  }
+  /* Article 3 */
+  .api-return-article {
+    font-size:200%
+  }
+  /* section */
+  section {
+    overflow: hidden;
+  }
+  /* footer */
+  footer {
+    position: relative;
+  }
+}
+@media (min-width: 1024px) {
+  /* header */
+  h1 {
+    font-size: 400%;
+  }
+  header {
+    height: 13vh;
+  }
+  /* Article 1 */
+  .ears {
+    width: 40vw;
+    display: block;
+    margin: 5% auto -15% auto;
+  }
+  h2 {
+    font-size: 250%;
+  }
+  form {
+    font-size: 220%;
+    height: 10%;
+  }
+  input {
+    height: 5vh;
+  }
+  /* Article 3 */
+  
+  /* section */
+  section {
+    overflow: hidden;
   }
   /* footer */
   footer {
