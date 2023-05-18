@@ -7,6 +7,7 @@
 }
 body {
   background-color: #b3c5d7;
+  
 }
 /* header */
 header {
@@ -194,6 +195,7 @@ footer {
 
 /* Background animation */
 section{
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -334,3 +336,4 @@ span:nth-child(10){
 
 
 
+.map
